@@ -10,7 +10,7 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ApiCallsTest extends TestCase
-{
+{    
     //refreshes db then uses transactions to clear data between tests
     use RefreshDatabase;
     /**
@@ -150,5 +150,14 @@ class ApiCallsTest extends TestCase
             ]); 
     }
 
+    public function setUp(): void
+    {
+        parent::setUp();    
+    }
 
+    public function tearDown(): void
+    {
+        parent::tearDown(); 
+
+    }
 }
